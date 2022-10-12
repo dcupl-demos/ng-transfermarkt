@@ -1,0 +1,14 @@
+<div class="">
+  <div class="flex items-center" *ngFor="let entry of filterItem.entries">
+    <input
+      [value]="entry.value"
+      [checked]="entry.selected"
+      type="checkbox"
+      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+      (change)="toggleFilterEntry(entry)"
+    />
+    <label for="filter-color-0" class="ml-3 text-sm text-gray-600">
+      {{ entry.value }} - {{ entry.size }}
+    </label>
+  </div>
+</div>

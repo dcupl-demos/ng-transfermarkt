@@ -1,0 +1,19 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "*.dcupl.json",
+            ],
+            "url": "https://raw.githubusercontent.com/dcupl/dcupl-schema/main/bin/dcupl.model.vscode.schema.json"
+            
+        },
+        {
+            "fileMatch": [
+                "*.dcupl.lc.json",
+                "dcupl.lc.json",
+            ],
+            "url": "https://raw.githubusercontent.com/dcupl/dcupl-schema/main/bin/dcupl.loader.vscode.schema.json"
+            
+        }
+    ]
+}

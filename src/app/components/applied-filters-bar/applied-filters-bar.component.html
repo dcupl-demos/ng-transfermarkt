@@ -1,0 +1,20 @@
+<div class="flex items-center">
+  <div
+    class="mx-2 bg-gray-200 px-2 py-1 text-xs rounded-full cursor-pointer hover:bg-gray-400"
+    (click)="removeFilter(item)"
+    *ngFor="let item of meta?.appliedFilters"
+  >
+    <ng-container *ngIf="item.type === 'textConstraint'">
+      {{ item.filterKey }}: {{ item.value }}
+    </ng-container>
+    <ng-container *ngIf="item.type === 'dateConstraint'">
+      {{ item.filterKey }}: {{ item.eq }}
+    </ng-container>
+    <ng-container *ngIf="item.type === 'numberConstraint'">
+      {{ item.filterKey }}: {{ item.gte }} - {{ item.lte }}
+    </ng-container>
+    <ng-container *ngIf="item.type === 'referenceConstraint'">
+      {{ item.filterKey }}: {{ item.value }}
+    </ng-container>
+  </div>
+</div>

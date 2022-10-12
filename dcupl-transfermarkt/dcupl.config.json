@@ -1,0 +1,10 @@
+{
+  "projectId": "",
+  "loaderPath": "dcupl/dcupl.lc.json",
+  "modelsBasePath": "dcupl/models",
+  "baseFolder": "dcupl",
+  "filesUpload": {
+    "include": ["**/*.json", "**/*.csv"],
+    "exclude": []
+  }
+}

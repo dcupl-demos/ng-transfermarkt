@@ -1,0 +1,10 @@
+<div class="flex items-center">
+  <div class="w-full mr-2">
+    <input type="date" class="app-input" placeholder="search term" #input />
+  </div>
+  <div class="flex-shrink-0">
+    <button class="app-button" (click)="applyDateFilter(input, filterItem)">
+      apply
+    </button>
+  </div>
+</div>

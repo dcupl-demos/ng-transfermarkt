@@ -1,0 +1,14 @@
+<div class="flex items-center">
+  <div class="flex w-full mr-2">
+    <input type="number" class="app-input" placeholder="min" #minInput />
+    <input type="number" class="app-input" placeholder="max" #maxInput />
+  </div>
+  <div class="flex-shrink-0">
+    <button
+      class="app-button"
+      (click)="applyNumberFilter(minInput, maxInput, filterItem)"
+    >
+      apply
+    </button>
+  </div>
+</div>

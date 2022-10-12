@@ -1,0 +1,23 @@
+{
+  "key": "valuations",
+  "autoGenerateKey": true,
+  "references": [
+    {
+      "key": "player_id",
+      "model": "players",
+      "type": "singleValued"
+    }
+  ],
+  "properties": [
+    {
+      "key": "date",
+      "type": "date",
+      "filter": true
+    },
+    {
+      "key": "market_value",
+      "type": "float",
+      "filter": true
+    }
+  ]
+}

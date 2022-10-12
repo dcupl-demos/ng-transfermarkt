@@ -1,0 +1,44 @@
+[
+  {
+    "key": "clubs",
+    "keyProperty": "club_id",
+    "references": [
+      {
+        "key": "players",
+        "model": "players",
+        "resolve": {
+          "reference": "current_club_id",
+          "model": "players"
+        },
+        "type": "multiValued"
+      }
+    ],
+    "properties": [
+      {
+        "key": "pretty_name",
+        "type": "string",
+        "filter": true
+      },
+      {
+        "key": "national_team_players",
+        "type": "int",
+        "filter": true
+      },
+      {
+        "key": "stadium_name",
+        "type": "string",
+        "filter": true
+      },
+      {
+        "key": "stadium_seats",
+        "type": "int",
+        "filter": true
+      },
+      {
+        "key": "coach_name",
+        "type": "string",
+        "filter": true
+      }
+    ]
+  }
+]

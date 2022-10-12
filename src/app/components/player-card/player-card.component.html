@@ -1,0 +1,35 @@
+<a href="#" class="group text-sm">
+  <div
+    class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75"
+  >
+    <img
+      *ngIf="player?.image_url"
+      [src]="player?.image_url"
+      alt="player image"
+      class="h-full w-full object-cover object-center"
+      loading="lazy"
+    />
+    <div
+      *ngIf="!player?.image_url"
+      class="h-full w-full object-cover object-center py-8 text-center"
+    >
+      Player image not available
+    </div>
+  </div>
+
+  <h3 class="mt-4 font-medium text-gray-900">
+    {{ player?.pretty_name }}
+  </h3>
+  <p class="italic text-gray-500">{{ player?.position?.key }}</p>
+  <p class="mt-2 font-medium text-gray-900">
+    <span>
+      {{ player?.market_value_in_gbp | currency: "£" }}
+    </span>
+  </p>
+  <!-- <p class="mt-2 text-xs font-light text-gray-500">
+    <span class="">
+      {{ getMinMarketValue(player) | currency: "£" }} -
+      {{ getMaxMarketValue(player) | currency: "£" }}
+    </span>
+  </p> -->
+</a>

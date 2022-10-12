@@ -1,0 +1,10 @@
+[
+  {
+    "key": "foot",
+    "supportsAutoCreation": true
+  },
+  {
+    "key": "position",
+    "supportsAutoCreation": true
+  }
+]

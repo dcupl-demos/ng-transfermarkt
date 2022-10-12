@@ -1,0 +1,23 @@
+<div class="flex items-center">
+  <div class="w-full mr-2">
+    <input
+      type="text"
+      class="app-input"
+      [attr.list]="filterItem.key"
+      placeholder="search term"
+      (keyup)="onKeyUp(input)"
+      #input
+    />
+    <datalist [id]="filterItem.key">
+      <option
+        *ngFor="let suggestion of suggestions"
+        [value]="suggestion.value"
+      ></option>
+    </datalist>
+  </div>
+  <div class="flex-shrink-0">
+    <button class="app-button" (click)="applyTextFilter(input, filterItem)">
+      apply
+    </button>
+  </div>
+</div>

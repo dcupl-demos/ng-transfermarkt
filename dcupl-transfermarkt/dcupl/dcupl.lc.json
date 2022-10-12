@@ -1,0 +1,90 @@
+{
+  "applications": [
+    {
+      "key": "players-only",
+      "description": "Transfermarkt data from kaggle",
+      "resourceTags": ["players"]
+    },
+    {
+      "key": "players-advanced",
+      "description": "Transfermarkt data from kaggle"
+    }
+  ],
+  "environments": [
+    {
+      "key": "localhost",
+      "variables": [
+        {
+          "key": "apiUrl",
+          "value": "http://localhost:8083"
+        }
+      ]
+    },
+    {
+      "key": "dcupl-cloud",
+      "description": "Dcupl Cloud",
+      "variables": [
+        {
+          "key": "cdnBaseUrl",
+          "value": "https://cdn.dcupl.com/files/projects"
+        },
+        {
+          "key": "version",
+          "value": "draft"
+        },
+        {
+          "key": "projectId",
+          "value": "OIUpYUGVy8R8BKnZHVtM"
+        },
+        {
+          "key": "apiUrl",
+          "value": "${cdnBaseUrl}/${projectId}/${version}"
+        }
+      ],
+      "queryParams": [
+        {
+          "key": "v",
+          "description": "Version variable for latest model cache",
+          "value": "${v}"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "url": "${apiUrl}/models/clubs.dcupl.json",
+      "type": "model",
+      "tags": ["clubs"]
+    },
+    {
+      "url": "${apiUrl}/models/valuations.dcupl.json",
+      "type": "model"
+    },
+    {
+      "url": "${apiUrl}/models/players.dcupl.json",
+      "type": "model",
+      "tags": ["players"]
+    },
+    {
+      "url": "${apiUrl}/models/additional.dcupl.json",
+      "type": "model"
+    },
+    {
+      "url": "${apiUrl}/data/clubs.csv",
+      "type": "data",
+      "model": "clubs",
+      "tags": ["clubs"]
+    },
+    {
+      "url": "${apiUrl}/data/valuations.csv",
+      "type": "data",
+      "model": "valuations"
+    },
+    {
+      "url": "${apiUrl}/data/players.csv",
+      "type": "data",
+      "model": "players",
+      "tags": ["players"]
+    }
+  ]
+}

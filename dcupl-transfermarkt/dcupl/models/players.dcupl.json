@@ -1,0 +1,109 @@
+[
+  {
+    "key": "clubSection",
+    "model": "players",
+    "type": "section",
+    "primaryAttribute": "current_club_id",
+    "aggregates": ["market_value_in_gbp"]
+  },
+  {
+    "key": "players",
+    "keyProperty": "player_id",
+    "references": [
+      {
+        "key": "current_club_id",
+        "model": "clubs",
+        "type": "singleValued"
+      },
+      {
+        "key": "player_valuations",
+        "model": "valuations",
+        "type": "multiValued",
+        "resolve": {
+          "reference": "player_id",
+          "model": "valuations"
+        }
+      },
+      {
+        "key": "foot",
+        "type": "singleValued",
+        "model": "foot",
+        "filter": {
+          "calculateFacets": true,
+          "excludeZeros": false
+        }
+      },
+      {
+        "key": "position",
+        "type": "singleValued",
+        "model": "position",
+        "filter": {
+          "calculateFacets": true,
+          "excludeZeros": false
+        }
+      }
+    ],
+    "properties": [
+      {
+        "key": "currentClubName",
+        "type": "string",
+        "derive": {
+          "localReference": "current_club_id",
+          "remoteProperty": "pretty_name"
+        },
+        "filter": true
+      },
+      {
+        "key": "all_market_values",
+        "type": "Array<int>",
+        "derive": {
+          "localReference": "player_valuations",
+          "remoteProperty": "market_value"
+        },
+        "filter": true
+      },
+      {
+        "key": "market_value_in_gbp",
+        "type": "int",
+        "filter": true,
+        "aggregate": true
+      },
+      {
+        "key": "pretty_name",
+        "type": "string",
+        "filter": true
+      },
+      {
+        "key": "last_season",
+        "type": "int"
+      },
+      {
+        "key": "country_of_birth",
+        "type": "string"
+      },
+      {
+        "key": "country_of_citizenship",
+        "type": "string",
+        "filter": true
+      },
+      {
+        "key": "date_of_birth",
+        "type": "date",
+        "filter": true
+      },
+      {
+        "key": "height_in_cm",
+        "type": "int",
+        "filter": true
+      },
+      {
+        "key": "agent_name",
+        "type": "string"
+      },
+      {
+        "key": "image_url",
+        "type": "string"
+      }
+    ]
+  }
+]
