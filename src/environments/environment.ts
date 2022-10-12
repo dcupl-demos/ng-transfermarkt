@@ -2,12 +2,9 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export type DemoEnvironment = {
-  production: boolean;
-  loaderUrl: string;
-  application: string;
-  environment: string;
-};
+import { DemoEnvironment } from "src/types/environment.types";
+
+
 
 export const environment: DemoEnvironment = {
   production: false,
