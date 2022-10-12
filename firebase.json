@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "transfermarkt",
-      "public": "dist/dcupl-example-angular",
+      "public": "dist/ng-transfermarkt",
       "ignore": ["**/.*"],
       "headers": [
         {
