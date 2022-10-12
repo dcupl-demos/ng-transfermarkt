@@ -1,0 +1,39 @@
+{
+  "hosting": [
+    {
+      "target": "transfermarkt",
+      "public": "dist/dcupl-example-angular",
+      "ignore": ["**/.*"],
+      "headers": [
+        {
+          "source": "**/*.@(js|css)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=31536000"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ]
+        },
+        {
+          "source": "/@(ngsw-worker.js|ngsw.json)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache"
+            }
+          ]
+        }
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Dcupl } from '@dcupl/core';
 import { DcuplAppLoader } from '@dcupl/loader';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -13,12 +14,12 @@ export class DcuplService {
   public async init() {
     this.dcupl.addLoader(this.loader);
     await this.loader.fetchConfig({
-      url: 'http://localhost:8083/dcupl.lc.json',
+      url: environment.loaderUrl,
     });
 
     await this.loader.process({
-      applicationKey: 'players-advanced',
-      environmentKeys: ['localhost'],
+      applicationKey: environment.application,
+      environmentKeys: [environment.environment],
     });
 
     this.dcupl.on$().subscribe(console.log);

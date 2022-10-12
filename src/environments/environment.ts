@@ -2,8 +2,18 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
-  production: false
+export type DemoEnvironment = {
+  production: boolean;
+  loaderUrl: string;
+  application: string;
+  environment: string;
+};
+
+export const environment: DemoEnvironment = {
+  production: false,
+  loaderUrl: 'http://localhost:8083/dcupl.lc.json',
+  application: 'players-advanced',
+  environment: 'localhost',
 };
 
 /*
