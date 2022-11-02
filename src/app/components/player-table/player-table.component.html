@@ -51,7 +51,7 @@
                     <div class="h-16 w-16 flex-shrink-0">
                       <img
                         class="h-16 w-16 rounded-full object-cover"
-                        *ngIf="player?.image_url"
+                        *ngIf="showOriginalImage && player?.image_url"
                         [src]="player?.image_url"
                         alt="player image"
                         loading="lazy"

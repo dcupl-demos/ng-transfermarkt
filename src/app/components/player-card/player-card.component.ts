@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Player } from 'src/app/pages/page-home/page-home.component';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-player-card',
@@ -8,6 +9,8 @@ import { Player } from 'src/app/pages/page-home/page-home.component';
 })
 export class PlayerCardComponent implements OnInit {
   @Input() player: Player | undefined;
+
+  public showOriginalImage = environment.loadImages;
 
   constructor() {}
 

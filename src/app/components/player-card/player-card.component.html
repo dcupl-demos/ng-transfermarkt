@@ -3,7 +3,7 @@
     class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75"
   >
     <img
-      *ngIf="player?.image_url"
+      *ngIf="showOriginalImage && player?.image_url"
       [src]="player?.image_url"
       alt="player image"
       class="h-full w-full object-cover object-center"

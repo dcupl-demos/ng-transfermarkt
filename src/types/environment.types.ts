@@ -1,6 +1,9 @@
 export type DemoEnvironment = {
   production: boolean;
-  loaderUrl: string;
+  devServerLoaderUrl?: string;
+  projectId: string;
+  apiKey: string;
   application: string;
   environment: string;
+  loadImages: boolean;
 };

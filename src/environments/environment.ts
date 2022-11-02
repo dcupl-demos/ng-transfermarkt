@@ -2,15 +2,16 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-import { DemoEnvironment } from "src/types/environment.types";
-
-
+import { DemoEnvironment } from 'src/types/environment.types';
 
 export const environment: DemoEnvironment = {
   production: false,
-  loaderUrl: 'http://localhost:8083/dcupl.lc.json',
+  devServerLoaderUrl: 'http://localhost:8083/dcupl.lc.json',
+  projectId: 'YAS91UMt6wZ5UlwzWd0f',
+  apiKey: 'aae38ecb-faa9-467f-a238-d7829b077fda',
   application: 'players-advanced',
   environment: 'localhost',
+  loadImages: true
 };
 
 /*
