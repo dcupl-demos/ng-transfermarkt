@@ -2,12 +2,14 @@
   "applications": [
     {
       "key": "players-only",
-      "description": "Transfermarkt data from kaggle",
+      "name": "Players Only",
+      "description": "Only load football players; transfermarkt data from kaggle",
       "resourceTags": ["players"]
     },
     {
       "key": "players-advanced",
-      "description": "Transfermarkt data from kaggle"
+      "name": "Players Advanced",
+      "description": "Load all resources; transfermarkt data from kaggle"
     }
   ],
   "environments": [],

@@ -1,23 +1,39 @@
 {
   "key": "valuations",
   "autoGenerateKey": true,
+  "meta": {
+    "name": "valuations Model",
+    "description": "Entity \"valuations\" - the player's valuation in the course of his career"
+  },
   "references": [
     {
       "key": "player_id",
       "model": "players",
-      "type": "singleValued"
+      "type": "singleValued",
+      "meta": {
+        "name": "Players",
+        "description": "Reference to players based on the player's id"
+      }
     }
   ],
   "properties": [
     {
       "key": "date",
       "type": "date",
-      "filter": true
+      "filter": true,
+      "meta": {
+        "name": "Date",
+        "description": "Date of the valuation"
+      }
     },
     {
       "key": "market_value",
       "type": "float",
-      "filter": true
+      "filter": true,
+      "meta": {
+        "name": "Market value",
+        "description": "Market value of the player in GBP"
+      }
     }
   ]
 }

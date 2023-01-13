@@ -2,6 +2,10 @@
   {
     "key": "clubs",
     "keyProperty": "club_id",
+    "meta": {
+      "name": "clubs Model",
+      "description": "Entity \"football clubs\""
+    },
     "references": [
       {
         "key": "players",
@@ -10,34 +14,58 @@
           "reference": "current_club_id",
           "model": "players"
         },
-        "type": "multiValued"
+        "type": "multiValued",
+        "meta": {
+          "name": "Players",
+          "description": "Resolved reference of the player's current club ID in players model"
+        }
       }
     ],
     "properties": [
       {
         "key": "pretty_name",
         "type": "string",
-        "filter": true
+        "filter": true,
+        "meta": {
+          "name": "Pretty name",
+          "description": "Full name of the player"
+        }
       },
       {
         "key": "national_team_players",
         "type": "int",
-        "filter": true
+        "filter": true,
+        "meta": {
+          "name": "National team players",
+          "description": "Number of national team players in the club"
+        }
       },
       {
         "key": "stadium_name",
         "type": "string",
-        "filter": true
+        "filter": true,
+        "meta": {
+          "name": "Stadium name",
+          "description": "Name of the club's stadium"
+        }
       },
       {
         "key": "stadium_seats",
         "type": "int",
-        "filter": true
+        "filter": true,
+        "meta": {
+          "name": "Stadium seats",
+          "description": "Maximum amount of seats respectively spectators in the stadium"
+        }
       },
       {
         "key": "coach_name",
         "type": "string",
-        "filter": true
+        "filter": true,
+        "meta": {
+          "name": "Coach name",
+          "description": "Name of the current coach at the club"
+        }
       }
     ]
   }

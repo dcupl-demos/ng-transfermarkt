@@ -1,10 +1,16 @@
 [
   {
     "key": "foot",
-    "supportsAutoCreation": true
+    "supportsAutoCreation": true,
+    "meta": {
+      "name": "Auto generated model for the \"foot\" of the player"
+    }
   },
   {
     "key": "position",
-    "supportsAutoCreation": true
+    "supportsAutoCreation": true,
+    "meta": {
+      "name": "Auto generated model for the \"position\" of the player"
+    }
   }
 ]
