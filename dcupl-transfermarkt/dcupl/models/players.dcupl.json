@@ -4,7 +4,10 @@
     "model": "players",
     "type": "section",
     "primaryAttribute": "current_club_id",
-    "aggregates": ["market_value_in_gbp"]
+    "aggregates": [{
+      "attribute":"market_value_in_gbp",
+      "types":["sum"]
+    }]
   },
   {
     "key": "players",
